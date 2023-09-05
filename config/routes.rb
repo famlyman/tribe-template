@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :team_matches do
+    resources :player_scores 
+  end
+  resources :memberships
+  resources :teams
   root 'pages#home'
   devise_for :players, controllers: {
     sessions: 'player/sessions',

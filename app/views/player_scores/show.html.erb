@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @player_score %>
+
+<div>
+  <%= link_to "Edit this player score", edit_player_score_path(@player_score) %> |
+  <%= link_to "Back to player scores", player_scores_path %>
+
+  <%= button_to "Destroy this player score", @player_score, method: :delete %>
+</div>

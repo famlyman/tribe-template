@@ -1,0 +1,32 @@
+<%= form_with(model: player_score) do |form| %>
+  <% if player_score.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(player_score.errors.count, "error") %> prohibited this player_score from being saved:</h2>
+
+      <ul>
+        <% player_score.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :player_id, style: "display: block" %>
+    <%= form.text_field :player_id %>
+  </div>
+
+  <div>
+    <%= form.label :team_match_id, style: "display: block" %>
+    <%= form.text_field :team_match_id %>
+  </div>
+
+  <div>
+    <%= form.label :score, style: "display: block" %>
+    <%= form.number_field :score %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
