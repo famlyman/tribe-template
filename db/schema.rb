@@ -78,6 +78,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_165059) do
   add_foreign_key "player_scores", "team_matches"
   add_foreign_key "set_scores", "player_scores"
   add_foreign_key "set_scores", "team_matches"
-  add_foreign_key "team_matches", "away_teams"
-  add_foreign_key "team_matches", "home_teams"
 end
